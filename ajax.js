@@ -4,10 +4,12 @@ document.addEventListener("DOMContentLoaded", function() {
   var button12 = document.querySelector('#button12');
   var button3456 = document.querySelector('#button3456');
   var button7 = document.querySelector('#button7');
+  var button8 = document.querySelector('#button8');
 
   button12.addEventListener('click', clickButton12);
   button3456.addEventListener('click', clickButton3456);
   button7.addEventListener('click', clickButton7);
+  button8.addEventListener('click', clickButton8);
 
   var dataOutput = document.createElement('p');
   var finished = document.createElement('p');
@@ -77,6 +79,34 @@ document.addEventListener("DOMContentLoaded", function() {
     section7.appendChild(dataOutput);
     finished.innerHTML = finishedMessage;
     section7.appendChild(finished);
+  }
+
+  // The following happens when button8 is clicked
+  function clickButton8() {
+
+    var section8 = document.querySelector('#step8');
+
+    $.ajax({
+
+      url: 'http://first-ajax-api.herokuapp.com/time',
+      method: 'GET',
+      data: { timezone: 'Europe/Sofia' },
+      dataType: 'text'
+
+    }).done(function (responseData) {
+      console.log('Here comes the time!');
+      dataOutput.innerHTML = responseData
+
+    }).fail(function () {
+      console.log('Ooops here is another error ...');
+      dataOutput.innerHTML = 'Sorry for the wrong time. I will do better next time.'
+
+    }).always(function () {
+      console.log(finishedMessage);
+    });
+    section8.appendChild(dataOutput);
+    finished.innerHTML = finishedMessage;
+    section8.appendChild(finished);
   }
 
 });
