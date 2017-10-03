@@ -17,18 +17,27 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   function clickButton3456() {
+
+    var section3456 = document.querySelector('#step3456');
+    var dataOutput = document.createElement('p');
+
     $.ajax({
+
       url: 'http://first-ajax-api.herokuapp.com/ping',
       method: 'GET',
       data: {},
       dataType: 'text'
+
     }).done(function (responseData) {
-      console.log(responseData);
-      var section3456 = document.querySelector('#step3456');
-      var dataOutput = document.createElement('p');
-      dataOutput.innerHTML = responseData;
-      section3456.appendChild(dataOutput);
+
+      dataOutput.innerHTML = responseData
+
+    }).fail(function () {
+
+      dataOutput.innerHTML = 'Oops sorry for the error ...'
+
     });
+    section3456.appendChild(dataOutput);
   }
 
 

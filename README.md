@@ -32,3 +32,9 @@ Step 3 - Using Information in the Response
 ----------------------------------------------------------------
 4) Click on the request. This displays a detailed view of this one request. Investigate the "Response" and "Preview" sub-tabs. What was the content of the response?
 <!-- The content of this response is "Wow what a ride! I came all the way from the server!" -->
+
+
+Step 4 - When Things Go Wrong...
+----------------------------------------------------------------
+3) What is the new HTTP status code?
+<!-- The new status code is 500, which stands for error with an unexpected condition -->
