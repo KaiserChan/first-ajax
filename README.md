@@ -38,3 +38,11 @@ Step 4 - When Things Go Wrong...
 ----------------------------------------------------------------
 3) What is the new HTTP status code?
 <!-- The new status code is 500, which stands for error with an unexpected condition -->
+
+
+Step 6 - All Together Now!
+----------------------------------------------------------------
+2) Switch back and forth between the /ping and /pong URLs, reloading the page and running your request each time. What do you see in your Developer Tools? What messages show up in your console?
+<!-- When at /ping, Dev Tools show a status code of 200 and the console shows the message that associates with the .done callback -->
+<!-- When at /pong, Dev Tools show a status code of 500 and the console shows the message that associates with the .fail callback -->
+<!-- In both cases, the message that associates with the .always callback shows as well -->

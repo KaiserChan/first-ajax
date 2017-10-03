@@ -31,11 +31,11 @@ document.addEventListener("DOMContentLoaded", function() {
       dataType: 'text'
 
     }).done(function (responseData) {
-
+      console.log('Alright here is your request result');
       dataOutput.innerHTML = responseData
 
     }).fail(function (responseData) {
-
+      console.log('Ooops ... sorry for the error ...');
       dataOutput.innerHTML = responseData.responseText
 
     }).always(function () {
