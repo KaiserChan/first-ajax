@@ -20,6 +20,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     var section3456 = document.querySelector('#step3456');
     var dataOutput = document.createElement('p');
+    var finished = document.createElement('p');
+    var finishedMessage = 'Well, anyways, the request is finished';
 
     $.ajax({
 
@@ -32,12 +34,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
       dataOutput.innerHTML = responseData
 
-    }).fail(function () {
+    }).fail(function (responseData) {
 
-      dataOutput.innerHTML = 'Oops sorry for the error ...'
+      dataOutput.innerHTML = responseData.responseText
 
+    }).always(function () {
+      console.log('Well, anyways, the request is finished.');
     });
     section3456.appendChild(dataOutput);
+    finished.innerHTML = finishedMessage;
+    section3456.appendChild(finished);
   }
 
 
