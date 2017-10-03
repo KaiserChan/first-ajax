@@ -52,3 +52,9 @@ Step 7 - The Hive Mind (Shared State)
 ----------------------------------------------------------------
 4) In a done callback, write the responseData to the Step 7 <section>. Ask your neighbour what number they got and compare. Run your request a few times and compare again!
 <!-- The /count route is an aggregated counter that records anyone who ever visited /count. The counter keeps going up by 1 based on the number of clicks by anyone accessing /count. -->
+
+
+Step 9 - Receiving HTML in the Response
+----------------------------------------------------------------
+3) Investigate the Request and Response "Headers" in your Network Tab. What is the 'Accepts' of the Request, and the 'Content-Type' of the response?
+<!-- The 'Accepts' of the request is 'text/html'. The 'Content-Type' of the response is  'text/html'-->

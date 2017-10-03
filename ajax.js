@@ -5,11 +5,13 @@ document.addEventListener("DOMContentLoaded", function() {
   var button3456 = document.querySelector('#button3456');
   var button7 = document.querySelector('#button7');
   var button8 = document.querySelector('#button8');
+  var button9 = document.querySelector('#button9');
 
   button12.addEventListener('click', clickButton12);
   button3456.addEventListener('click', clickButton3456);
   button7.addEventListener('click', clickButton7);
   button8.addEventListener('click', clickButton8);
+  button9.addEventListener('click', clickButton9);
 
   var dataOutput = document.createElement('p');
   var finished = document.createElement('p');
@@ -81,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function() {
     section7.appendChild(finished);
   }
 
-  // The following happens when button8 is clicked
+// The following happens when button8 is clicked
   function clickButton8() {
 
     var section8 = document.querySelector('#step8');
@@ -107,6 +109,36 @@ document.addEventListener("DOMContentLoaded", function() {
     section8.appendChild(dataOutput);
     finished.innerHTML = finishedMessage;
     section8.appendChild(finished);
+  }
+
+
+// The following happens when button8 is clicked
+  function clickButton9() {
+
+    var section9 = document.querySelector('#step9');
+    var unorderedList = document.querySelector('#car-model');
+
+    $.ajax({
+
+      url: 'http://first-ajax-api.herokuapp.com/a_car',
+      method: 'GET',
+      data: { },
+      dataType: 'html'
+
+    }).done(function (responseData) {
+      console.log('Here comes the car!');
+      // debugger
+      // unorderedList.insertAdjacentHTML('beforeend',responseData);
+      unorderedList.innerHTML += responseData;
+    }).fail(function () {
+      console.log('Ooops here is another error ...' );
+      dataOutput.innerHTML = 'What car is this? We will get it right next time.'
+
+    }).always(function () {
+      console.log(finishedMessage);
+    });
+    finished.innerHTML = finishedMessage;
+    section9.appendChild(finished);
   }
 
 });
