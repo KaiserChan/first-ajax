@@ -26,3 +26,9 @@ Step 1 - Your First AJAX Request
 
 6) What are the values in the "Type" and "Initiator" columns? Compare these values to Step 0.
 <!-- Type is now in 'xhr' and Initiator indicates 'jquery' -->
+
+
+Step 3 - Using Information in the Response
+----------------------------------------------------------------
+4) Click on the request. This displays a detailed view of this one request. Investigate the "Response" and "Preview" sub-tabs. What was the content of the response?
+<!-- The content of this response is "Wow what a ride! I came all the way from the server!" -->
