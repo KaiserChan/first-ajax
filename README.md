@@ -46,3 +46,9 @@ Step 6 - All Together Now!
 <!-- When at /ping, Dev Tools show a status code of 200 and the console shows the message that associates with the .done callback -->
 <!-- When at /pong, Dev Tools show a status code of 500 and the console shows the message that associates with the .fail callback -->
 <!-- In both cases, the message that associates with the .always callback shows as well -->
+
+
+Step 7 - The Hive Mind (Shared State)
+----------------------------------------------------------------
+4) In a done callback, write the responseData to the Step 7 <section>. Ask your neighbour what number they got and compare. Run your request a few times and compare again!
+<!-- The /count route is an aggregated counter that records anyone who ever visited /count. The counter keeps going up by 1 based on the number of clicks by anyone accessing /count. -->
