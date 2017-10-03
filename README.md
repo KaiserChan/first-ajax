@@ -17,3 +17,12 @@ Step 0 - Setup and Knowledge Check
 
 4) Look at the "Initiator" and "Type" columns. Was this an xhr/JavaScript/AJAX request or a normal browser request?
 <!-- Both requests are normal browser requests -->
+
+
+Step 1 - Your First AJAX Request
+----------------------------------------------------------------
+5) What are the values in the "Method" and "Status" columns? Compare these values to Step 0.
+<!-- Method is still 'GET' and status is still 200 -->
+
+6) What are the values in the "Type" and "Initiator" columns? Compare these values to Step 0.
+<!-- Type is now in 'xhr' and Initiator indicates 'jquery' -->

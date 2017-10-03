@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
       method: 'GET',
       data: {},
       dataType: 'text'
-    });    
+    });
   }
 
 
