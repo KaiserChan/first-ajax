@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     $.ajax({
 
-      url: 'http://first-ajax-api.herokuapp.com/ping',
+      url: 'http://first-ajax-api.herokuapp.com/pong',
       method: 'GET',
       data: {},
       dataType: 'text'
@@ -43,9 +43,10 @@ document.addEventListener("DOMContentLoaded", function() {
       console.log('Alright here is your request result');
       dataOutput.innerHTML = responseData
 
-    }).fail(function (responseData) {
+    }).fail(function (responseData, jqXHR, textStatus, errorThrown) {
       console.log('Ooops ... sorry for the error ...');
-      dataOutput.innerHTML = responseData.responseText
+      console.log( textStatus, errorThrown);
+      dataOutput.innerHTML = responseData.responseText;
 
     }).always(function () {
       console.log(finishedMessage);
